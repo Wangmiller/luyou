@@ -1,0 +1,35 @@
+export class XProject {
+  id: number;
+  sn: string;
+  label: string;
+  creator_sn: string;
+  create_dt: string;
+  custom_code: string;
+  last_update_dt: string;
+  display_code: number;
+  is_deleted: number;
+  is_na: number;
+  class_sn: string;
+  type_sn: string;
+  status_sn: string;
+  level_sn: string;
+  more_info: string;
+  seo_tag: string;
+  enterprise_sn: string;
+  lenovo_user_sn: string;
+  contact_dt: string;
+  total_budget: string;
+  main_content: string;
+  plan_start_dt: string;
+  plan_end_dt: string;
+  real_start_dt: string;
+  real_end_dt: string;
+  total_real_investment: string;
+  class_label: string;
+  level_label: string;
+  status_label: string;
+  type_label: string;
+  creator_label: string;
+  lenovo_label: string;
+  enterprise_label: string;
+}

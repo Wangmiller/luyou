@@ -1,0 +1,1 @@
+sudo ng serve --host 0.0.0.0 --port 8889 --proxy-config proxy.conf2.json

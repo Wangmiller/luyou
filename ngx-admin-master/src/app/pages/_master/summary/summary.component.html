@@ -1,0 +1,45 @@
+
+<div class="row">
+  <div class="col-lg-12">
+    <nb-card>
+      <nb-card-header>平台数据一览
+          <div class="date">
+              <span>{{ CDT }}</span>
+            </div>
+      </nb-card-header>
+      <nb-card-body>
+        <div class="row">
+
+          <div class="col-xxxl-3 col-md-6">
+            <span>用户总数</span>
+            <br />
+            <button class="btn btn-warning">{{ TotalUserCount }}</button>
+          </div>
+          <div class="col-xxxl-3 col-md-6">
+            <span>企业总数</span>
+            <br />
+            <button class="btn btn-info">{{ TotalEnterpriseCount }}</button>
+          </div>
+          <div class="col-xxxl-3 col-md-6">
+            <span>产品总数</span>
+            <br />
+            <button class="btn btn-success">{{ TotalProductCount }}</button>
+          </div>
+
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-lg-12">
+    <nb-card>
+      <nb-card-header>按行业一周新增产品</nb-card-header>
+      <nb-card-body>
+          <ngx-echarts-bar-product-last7></ngx-echarts-bar-product-last7>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

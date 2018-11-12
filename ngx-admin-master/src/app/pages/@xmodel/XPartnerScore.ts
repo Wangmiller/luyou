@@ -1,0 +1,30 @@
+export class XPartnerScore {
+    id: number;
+    partner_sn: string;
+    product_concept: number;
+    product_concept_des: string;
+    just_need: number;
+    just_need_des: string;
+    appearance_materia: number;
+    appearance_materia_des: string;
+    holistic_experience: number;
+    holistic_experience_des: string;
+    technology_maturity: number;
+    technology_maturity_des: string;
+    batch_production: number;
+    batch_production_des: string;
+    product_experience: number;
+    product_experience_des: string;
+    team_background: number;
+    team_background_des: string;
+    resource_capacity: number;
+    resource_capacity_des: string;
+    communication_cooperation: number;
+    communication_cooperation_des: string;
+    planning_interaction: number;
+    planning_interaction_des: string;
+    investment_situation: number;
+    investment_situation_des: string;
+    total_score: number;
+    create_dt: string;
+}

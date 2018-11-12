@@ -1,0 +1,94 @@
+<nb-card>
+  <nb-card-header>
+    loT开发者走访报告
+  </nb-card-header>
+
+  <nb-card-body>
+    <div>
+      <label class="col-md-12 table-title">公司基础信息</label>
+      <form class="col-md-12 company-detail" action="">
+        <label class="col-md-2 line-title">公司名称</label>
+        <input class="col-md-10"  [(ngModel)]="company_name" name="company_name"/>
+        <label class="col-md-2 line-title">所属行业</label>
+        <input class="col-md-10" [(ngModel)]="industry_id" name="industry_id"/>
+        <label class="col-md-2 line-title">主要产品</label>
+        <input class="col-md-10" [(ngModel)]="product_id" name="product_id"/>
+        <label class="col-md-2 line-title">公司地址</label>
+        <input class="col-md-10" [(ngModel)]="company_address" name="company_address"/>
+        <label class="col-md-2 line-title">首次拜访日期</label>
+        <input class="col-md-10" [(ngModel)]="first_visit_time" name="first_visit_time"/>
+        <label class="col-md-2 line-title">首次拜联想人员</label>
+        <input class="col-md-10" [(ngModel)]="first_visitor" name="first_visitor"/>
+        <label class="col-md-2 line-title">产品及解决方案详述</label>
+        <input class="col-md-10" [(ngModel)]="product_desc" name="product_desc"/>
+        <button  class="btn btn-primary" (click)="createCompanyBase()" type="submit">提交</button>
+      </form>
+
+
+      <label class="col-md-12 table-title">联系人员及联系方式</label>
+      <!--<ng2-smart-table [settings]="setcontracts" [source]="XPartnerContracts" (createConfirm)="onCreateConfirm($event)" (editConfirm)="onEditConfirm($event)" (deleteConfirm)="onDeleteConfirm($event)">
+      </ng2-smart-table>-->
+
+      <div class="score-part">
+        <label class="col-md-12 table-title">综合评分(60)</label>
+        <form action="" class="col-md-12 line-numbers10 company-detail score-form" #f="ngForm">
+          <div class="col-md-12 t-title"><span class="col-md-3">评分维度</span><span class="col-md-2">分值</span><span class="col-md-7">描述</span></div>
+          <div class="col-md-12 form-control part-label">产品评估(60)</div>
+          <label for="" class="col-md-3">产品概念(10)</label>
+          <input type="text" class="col-md-2"  [(ngModel)]="this.currentXPartnerScore.product_concept" name="product_concept" >
+          <input type="text" class="col-md-7"  [(ngModel)]="this.currentXPartnerScore.product_concept_des" name="product_concept_des" >
+          <label for="" class="col-md-3 ">刚需度(15)</label>
+          <input type="text" class="col-md-2" [(ngModel)]="this.currentXPartnerScore.just_need" name="just_need">
+          <input type="text" class="col-md-7" [(ngModel)]="this.currentXPartnerScore.just_need_des" name="just_need_des">
+          <label for="" class="col-md-3 ">外观设计/材质(5)</label>
+          <input type="text" class="col-md-2" [(ngModel)]="this.currentXPartnerScore.appearance_materia" name="appearance_materia">
+          <input type="text" class="col-md-7" [(ngModel)]="this.currentXPartnerScore.appearance_materia_des" name="appearance_materia_des">
+          <label for="" class="col-md-3 ">整体体验(10)</label>
+          <input type="text" class="col-md-2" [(ngModel)]="this.currentXPartnerScore.holistic_experience" name="holistic_experience">
+          <input type="text" class="col-md-7" [(ngModel)]="this.currentXPartnerScore.holistic_experience_des" name="holistic_experience_des">
+          <label for="" class="col-md-3 ">技术成熟度(10)</label>
+          <input type="text" class="col-md-2" [(ngModel)]="this.currentXPartnerScore.technology_maturity" name="technology_maturity">
+          <input type="text" class="col-md-7" [(ngModel)]="this.currentXPartnerScore.technology_maturity_des" name="technology_maturity_des">
+          <label for="" class="col-md-3 ">量产性(10)</label>
+          <input type="text" class="col-md-2" [(ngModel)]="this.currentXPartnerScore.batch_production" name="batch_production">
+          <input type="text" class="col-md-7" [(ngModel)]="this.currentXPartnerScore.batch_production_des" name="batch_production_des">
+
+          <div class="col-md-12 line-numbers3 form-control part-label">公司团队评估(30)</div>
+          <label for="" class="col-md-3 ">产品经验(10)</label>
+          <input type="text" class="col-md-2" [(ngModel)]="this.currentXPartnerScore.product_experience" name="product_experience">
+          <input type="text" class="col-md-7" [(ngModel)]="this.currentXPartnerScore.product_experience_des" name="product_experience_des">
+          <label for="" class="col-md-3 ">成员/团队背景(10)</label>
+          <input type="text" class="col-md-2" [(ngModel)]="this.currentXPartnerScore.team_background" name="team_background">
+          <input type="text" class="col-md-7" [(ngModel)]="this.currentXPartnerScore.team_background_des" name="team_background_des">
+          <label for="" class="col-md-3 ">资源能力(5)</label>
+          <input type="text" class="col-md-2" [(ngModel)]="this.currentXPartnerScore.resource_capacity" name="resource_capacity">
+          <input type="text" class="col-md-7" [(ngModel)]="this.currentXPartnerScore.resource_capacity_des" name="resource_capacity_des">
+          <label for="" class="col-md-3 ">合作沟通(5)</label>
+          <input type="text" class="col-md-2" [(ngModel)]="this.currentXPartnerScore.communication_cooperation" name="communication_cooperation">
+          <input type="text" class="col-md-7" [(ngModel)]="this.currentXPartnerScore.communication_cooperation_des" name="communication_cooperation_des">
+
+          <div class="col-md-12 line-numbers3 form-control part-label">营销&策划(5)</div>
+          <label for="" class="col-md-3 ">包装策划及互动(5)</label>
+          <input type="text" class="col-md-2" [(ngModel)]="this.currentXPartnerScore.planning_interaction" name="planning_interaction">
+          <input type="text" class="col-md-7" [(ngModel)]="this.currentXPartnerScore.planning_interaction_des" name="planning_interaction_des">
+
+          <div class="col-md-12 line-numbers3 form-control part-label">公司运营(5)</div>
+          <label for="" class="col-md-3 ">资金/投资情况(5)</label>
+          <input type="text" class="col-md-2" [(ngModel)]="this.currentXPartnerScore.investment_situation" name="investment_situation">
+          <input type="text" class="col-md-7" [(ngModel)]="this.currentXPartnerScore.investment_situation_des" name="investment_situation_des">
+          <button  class="btn btn-primary" (click)="createScore()" type="submit">提交</button>
+        </form>
+      </div>
+
+      <label class="col-md-12 table-title">后续跟踪记录</label>
+      <ng2-smart-table [settings]="setVisitRecords" [source]="XPartnerVisitRecords" (createConfirm)="onCreateConfirm($event)" (editConfirm)="onEditConfirm($event)" (deleteConfirm)="onDeleteConfirm($event)">
+      </ng2-smart-table>
+    </div>
+
+    <!--<ng2-smart-table [settings]="settings" [source]="xs" (createConfirm)="onCreateConfirm($event)" (editConfirm)="onEditConfirm($event)" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table>-->
+
+  </nb-card-body>
+</nb-card>
+
+

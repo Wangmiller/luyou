@@ -1,0 +1,31 @@
+<nb-card>
+  <nb-card-header>
+    合作伙伴列表
+  </nb-card-header>
+
+  <nb-card-body>
+    <div class="row" > <!-- 覆盖默认的44px高度-->
+      <div class="col-md-2">
+        <div class="form-group">
+
+          <select class="form-control" (change)="doQuery($event.target.value)">
+            <option value="all">全部</option>
+            <option value="1w">近一周</option>
+            <option value="2w">近两周</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-10 ">
+        <button class="btn btn-primary" (click)="export2Csv()">导出CSV</button>&nbsp;&nbsp;&nbsp;
+        <a class="btn btn-primary" href="#/pages_a/_adamiya/partner_add/">添加</a>
+      </div>
+      <!--<div class="col-md-10 ">
+        <button class="btn btn-primary" (click)="export2Csv()">导出CSV</button>
+      </div>-->
+    </div>
+    <ng2-smart-table [settings]="settings" [source]="xs" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
+
+

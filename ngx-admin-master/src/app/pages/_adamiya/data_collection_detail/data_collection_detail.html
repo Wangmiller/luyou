@@ -1,0 +1,97 @@
+<div>
+    <div class="project" >
+        <div class="project-img">
+            <i class="zc-success"></i>
+            <img src="{{ad_img}}" alt="" class="adImg">
+        </div>
+
+        <div class="project-introduce">
+            <h1 class="p-title">{{product_name}}</h1>
+            <p class="p-have">已筹到</p>
+            <p class="p-num"><span>￥</span>{{raised_amount}}</p>
+            <div class="p-bar">
+                <div class="p-bar-purple"></div>
+            </div>
+            <p class="p-progress">
+                <span class="fl percent" >当前进度{{progresss}}%</span><span class="fr">{{supporter}}名支持者</span>
+            </p>
+        </div>
+    </div>
+    <div class="body-div" >
+    <div class="div-img-vid" >
+        <video src="{{introduction_video_url}}" controls id ="video"></video>
+        <img src="{{CurrentX.introduction_img_url}}" alt="" class="introductionImg">
+    </div>
+    <div class="div-detail" >
+        <div class="box-grade personal" >
+            <div class="box-content">
+                <div>
+                    <h4>项目发起人</h4>
+                </div>
+                <div class="cb">
+                    <hr >
+                </div>
+                <a href="{{CurrentX.promoters_url}}" target="_blank" title="">
+                    <p class="box-item" id="name">姓名：<span class="font-b">{{CurrentX.promoters}}</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="lists" >
+            <div *ngFor="let item of xsPackage; let i = index">
+                <div class="box-grade ">
+                    <div class="common-title Jfold">
+                        <div class="t-price ">
+                            ￥<span>{{item.price}}</span>
+                        </div>
+                        <div class="t-people" clstag="pageclick|keycount|details_201603213|19">
+                            <span>{{item.supporter}}</span>位支持者
+                        </div>
+                        <div class="cb">
+                            <hr >
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <div class="box-limit">
+                            <span class="limit-num">限额 <span>{{item.limit_support}}</span>份 | 剩余 <span>{{item.surplus_support}}</span>份</span>
+                        </div>
+                        <p class="box-intro">
+                            感谢您的支持！{{item.info}}</p>
+                        <!--<div class="box-imglist">
+                            <ul>
+                                <li clstag="pageclick|keycount|details_201603213|21"><img src="//img30.360buyimg.com/cf/s128x128_jfs/t23620/76/2708590288/23030/9195526e/5b89056dNef49860e.jpg"></li>
+                            </ul>
+                        </div>
+                        <p class="box-item">赠品：<span class="font-b">SIM卡分离器</span></p>
+                        <p class="box-item">配送费用：
+                            <span class="font-b">免运费</span>
+                        </p>
+                        <p class="box-item">预计回报发送时间：<span class="font-b">项目众筹成功后<span class="font-red">30</span>天内</span></p>-->
+                        <p class="box-btn">
+                            <input type="button" class="common-btn-unuse" disabled="true" value="{{project_status}}">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-grade " >
+            <div class="box-content">
+                <div>
+                    <h4>联系方式</h4>
+                </div>
+                <div class="cb">
+                    <hr >
+                </div>
+                <p class="box-item">公司名称：<span class="font-b">{{CurrentX.enterprise_name}}</span></p>
+                <p class="box-item">联系地址：<span class="font-b">{{CurrentX.address}}</span></p>
+                <p class="box-item">官方电话：<span class="font-b">{{CurrentX.telphone}}</span></p>
+                <!--<p class="box-item">工作时间：工作日 <span class="font-b">4</span></p>-->
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="col-md-12 col-lg-12">
+    <button (click)="backD()" class="btn btn-success">返回列表</button>
+</div>

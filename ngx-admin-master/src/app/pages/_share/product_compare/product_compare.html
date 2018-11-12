@@ -1,0 +1,11 @@
+<nb-card>
+  <nb-card-header>
+    产品对比
+    <button (click)="deleteD()" class="btn btn-danger pull-right" id="btnDel">清空对比</button>
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" [source]="xs">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

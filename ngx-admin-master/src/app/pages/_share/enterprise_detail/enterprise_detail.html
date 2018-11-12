@@ -1,0 +1,324 @@
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>
+        企业详细信息
+      </nb-card-header>
+      <nb-card-body>
+        <nb-tabset fullWidth>
+          <nb-tab tabTitle="基本">
+            <div class="row">
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="label">公司名称</label>
+                  <input type="text" readonly="readonly" class="form-control" id="label" name="label" [(ngModel)]="this.CurrentX.label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_cn_uid">统一信用代码</label>
+                  <input type="text" readonly="readonly" class="form-control" id="basic_cn_uid" name="basic_cn_uid" [(ngModel)]="this.CurrentX.basic_cn_uid">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_setup_dt">成立日期</label>
+                  <input type="text" readonly="readonly" class="form-control" id="basic_setup_dt" name="basic_setup_dt" [(ngModel)]="this.CurrentX.basic_setup_dt">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_reg_sn">注册号</label>
+                  <input type="text" readonly="readonly" class="form-control" id="basic_reg_sn" name="basic_reg_sn" [(ngModel)]="this.CurrentX.basic_reg_sn">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_reg_address">总部地点</label>
+                  <input type="text" readonly="readonly" class="form-control" id="basic_reg_address" name="basic_reg_address" [(ngModel)]="this.CurrentX.basic_reg_address">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="type_label">公司类型</label>
+                  <input type="text" readonly="readonly" class="form-control" id="type_label" name="type_label" [(ngModel)]="this.CurrentX.type_label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_biz_keywords">主营业务</label>
+                  <input type="text" readonly="readonly" class="form-control" id="basic_biz_keywords" name="basic_biz_keywords" [(ngModel)]="this.CurrentX.basic_biz_keywords">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_legal_rep">法人代表</label>
+                  <input type="text" readonly="readonly" class="form-control" id="basic_legal_rep" name="basic_legal_rep" [(ngModel)]="this.CurrentX.basic_legal_rep">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_latest_reg_dt">最新变更日期</label>
+                  <input type="text" readonly="readonly" class="form-control" id="basic_latest_reg_dt" name="basic_latest_reg_dt" [(ngModel)]="this.CurrentX.basic_latest_reg_dt">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_reg_capital">注册资本</label>
+                  <input type="text" readonly="readonly" class="form-control" id="basic_reg_capital" name="basic_reg_capital" [(ngModel)]="this.CurrentX.basic_reg_capital">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_biz_dt_range">营业期限</label>
+                  <input type="text" readonly="readonly" class="form-control" id="basic_biz_dt_range" name="basic_biz_dt_range" [(ngModel)]="this.CurrentX.basic_biz_dt_range">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_charge_office">登记机关</label>
+                  <input type="text" readonly="readonly" class="form-control" id="basic_charge_office" name="basic_charge_office" [(ngModel)]="this.CurrentX.basic_charge_office">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_biz_tel">办公电话</label>
+                  <input type="text" readonly="readonly" class="form-control" id="basic_biz_tel" name="basic_biz_tel" [(ngModel)]="this.CurrentX.basic_biz_tel">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_org_sn">组织机构代码</label>
+                  <input type="text" readonly="readonly" class="form-control" id="basic_org_sn" name="basic_org_sn" [(ngModel)]="this.CurrentX.basic_org_sn">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_biz_address">企业地址</label>
+                  <input type="text" readonly="readonly" class="form-control" id="basic_biz_address" name="basic_biz_address" [(ngModel)]="this.CurrentX.basic_biz_address">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="status_label">经营状态</label>
+                  <input type="text" readonly="readonly" class="form-control" id="status_label" name="status_label" [(ngModel)]="this.CurrentX.status_label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="industries">关联行业</label>
+                  <input type="text" readonly="readonly" class="form-control" id="industries" name="industries" [(ngModel)]="this.CurrentX.industries">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="scenes">关联场景</label>
+                  <input type="text" readonly="readonly" class="form-control" id="scenes" name="scenes" [(ngModel)]="this.CurrentX.scenes">
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                  <label for="basic_biz_range">经营范围</label>
+                  <input type="text" readonly="readonly" class="form-control" id="basic_biz_range" name="basic_biz_range" [(ngModel)]="this.CurrentX.basic_biz_range">
+                </div>
+              </div>
+            </div>
+          </nb-tab>
+          <nb-tab tabTitle="联系人">
+            <h5 class="grid-h">联想负责人</h5>
+            <ng2-smart-table [settings]="settingsUserLenovo" [source]="xsUserLenovo">
+            </ng2-smart-table>
+            <hr />
+            <h5 class="grid-h">联系人</h5>
+            <ng2-smart-table [settings]="settingsUserContact" [source]="xsUserContact">
+            </ng2-smart-table>
+          </nb-tab>
+          <nb-tab tabTitle="财务">
+            <div class="row">
+              <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                  <span>上一年度 {{ lastYear }}</span>
+                  <hr />
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_asset_last">资产总额</label>
+                  <input type="text" readonly="readonly" class="form-control" id="acc_asset_last" name="acc_asset_last" [(ngModel)]="this.CurrentX.acc_asset_last">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_sales_last">销售收入</label>
+                  <input type="text" readonly="readonly" class="form-control" id="acc_sales_last" name="acc_sales_last" [(ngModel)]="this.CurrentX.acc_sales_last">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_debt_last">负债总额</label>
+                  <input type="text" readonly="readonly" class="form-control" id="acc_debt_last" name="acc_debt_last" [(ngModel)]="this.CurrentX.acc_debt_last">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_profit_last">净利润</label>
+                  <input type="text" readonly="readonly" class="form-control" id="acc_profit_last" name="acc_profit_last" [(ngModel)]="this.CurrentX.acc_profit_last">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_debt_rate_last">资产负债率</label>
+                  <input type="text" readonly="readonly" class="form-control" id="acc_debt_rate_last" name="acc_debt_rate_last" [(ngModel)]="this.CurrentX.acc_debt_rate_last">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+
+              </div>
+              <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                  <span>本年度 {{ thisYear }}</span>
+                  <hr />
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_asset">资产总额</label>
+                  <input type="text" readonly="readonly" class="form-control" id="acc_asset" name="acc_asset" [(ngModel)]="this.CurrentX.acc_asset">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_sales">销售收入</label>
+                  <input type="text" readonly="readonly" class="form-control" id="acc_sales" name="acc_sales" [(ngModel)]="this.CurrentX.acc_sales">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_debt">负债总额</label>
+                  <input type="text" readonly="readonly" class="form-control" id="acc_debt" name="acc_debt" [(ngModel)]="this.CurrentX.acc_debt">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_profit">净利润</label>
+                  <input type="text" readonly="readonly" class="form-control" id="acc_profit" name="acc_profit" [(ngModel)]="this.CurrentX.acc_profit">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_debt_rate">资产负债率</label>
+                  <input type="text" readonly="readonly" class="form-control" id="acc_debt_rate" name="acc_debt_rate" [(ngModel)]="this.CurrentX.acc_debt_rate">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+
+              </div>
+              <div class="col-sm-12 col-lg-12">
+                <hr />
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_bank">收款银行</label>
+                  <input type="text" readonly="readonly" class="form-control" id="acc_bank" name="acc_bank" [(ngModel)]="this.CurrentX.acc_bank">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_bank_branch">支行名称</label>
+                  <input type="text" readonly="readonly" class="form-control" id="acc_bank_branch" name="acc_bank_branch" [(ngModel)]="this.CurrentX.acc_bank_branch">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_bank_sn">账号</label>
+                  <input type="text" readonly="readonly" class="form-control" id="acc_bank_sn" name="acc_bank_sn" [(ngModel)]="this.CurrentX.acc_bank_sn">
+                </div>
+              </div>
+            </div>
+          </nb-tab>
+          <nb-tab tabTitle="项目">
+            <ng2-smart-table [settings]="settingsProject" [source]="xsProject">
+            </ng2-smart-table>
+          </nb-tab>
+          <nb-tab tabTitle="产品">
+            <ng2-smart-table [settings]="settingsProduct" [source]="xsProduct">
+            </ng2-smart-table>
+          </nb-tab>
+          <nb-tab tabTitle="附件">
+            <ng2-smart-table [settings]="settingsFile" (userRowSelect)="onFileRowSelect($event)" [source]="xsFile">
+            </ng2-smart-table>
+          </nb-tab>
+          <nb-tab tabTitle="其他">
+            <div class="row">
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="other_credits">资质认证</label>
+                  <input type="text" readonly="readonly" class="form-control" id="other_credits" name="other_credits" [(ngModel)]="this.CurrentX.other_credits">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="other_deliver_address">交货地点</label>
+                  <input type="text" readonly="readonly" class="form-control" id="other_deliver_address" name="other_deliver_address" [(ngModel)]="this.CurrentX.other_deliver_address">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="level_label">企业等级</label>
+                  <input type="text" readonly="readonly" class="form-control" id="level_label" name="level_label" [(ngModel)]="this.CurrentX.level_label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="other_transport">运输方式</label>
+                  <input type="text" readonly="readonly" class="form-control" id="other_transport" name="other_transport" [(ngModel)]="this.CurrentX.other_transport">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="other_website">公司网站</label>
+                  <input type="text" readonly="readonly" class="form-control" id="other_website" name="other_website" [(ngModel)]="this.CurrentX.other_website">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="other_deliver_days">最短交货期</label>
+                  <input type="text" readonly="readonly" class="form-control" id="other_deliver_days" name="other_deliver_days" [(ngModel)]="this.CurrentX.other_deliver_days">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="other_email">公司邮箱</label>
+                  <input type="text" readonly="readonly" class="form-control" id="other_email" name="other_email" [(ngModel)]="this.CurrentX.other_email">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="other_size">公司规模</label>
+                  <input type="text" readonly="readonly" class="form-control" id="other_size" name="other_size" [(ngModel)]="this.CurrentX.other_size">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="seo_tag">企业标签</label>
+                  <input type="text" readonly="readonly" class="form-control" id="seo_tag" name="seo_tag" [(ngModel)]="this.CurrentX.seo_tag">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="more_info">备注</label>
+                  <input type="text" readonly="readonly" class="form-control" id="more_info" name="more_info" [(ngModel)]="this.CurrentX.more_info">
+                </div>
+              </div>
+            </div>
+          </nb-tab>
+        </nb-tabset>
+        <hr />
+        <div class="col-md-12 col-lg-12">
+          <button (click)="backD()" class="btn btn-success">返回列表</button>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+

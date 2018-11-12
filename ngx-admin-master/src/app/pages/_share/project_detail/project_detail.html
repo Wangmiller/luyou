@@ -1,0 +1,117 @@
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>
+        项目详细信息&nbsp;&nbsp;
+      </nb-card-header>
+      <nb-card-body>
+        <nb-tabset fullWidth>
+          <nb-tab tabTitle="基本">
+            <div class="row">
+              <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                  <label for="label">项目名称</label>
+                  <input type="text" readonly="readonly" class="form-control" id="label" name="label" [(ngModel)]="this.CurrentX.label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="custom_code">项目编号</label>
+                  <input type="text" readonly="readonly" class="form-control" id="custom_code" name="custom_code" [(ngModel)]="this.CurrentX.custom_code">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="type_label">项目类型</label>
+                  <input type="text" readonly="readonly" class="form-control" id="type_label" name="type_label" [(ngModel)]="this.CurrentX.type_label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="total_budget">总预算</label>
+                  <input type="text" readonly="readonly" class="form-control" id="total_budget" name="total_budget" [(ngModel)]="this.CurrentX.total_budget">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="total_real_investment">实际投资</label>
+                  <input type="text" readonly="readonly" class="form-control" id="total_real_investment" name="total_real_investment" [(ngModel)]="this.CurrentX.total_real_investment">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="contact_dt">对接时间</label>
+                  <input type="text" readonly="readonly" class="form-control" id="contact_dt" name="contact_dt" [(ngModel)]="this.CurrentX.contact_dt">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="seo_tag">项目特性关键字</label>
+                  <input type="text" readonly="readonly" class="form-control" id="seo_tag" name="seo_tag" [(ngModel)]="this.CurrentX.seo_tag">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="level_label">项目等级</label>
+                  <input type="text" readonly="readonly" class="form-control" id="level_label" name="level_label" [(ngModel)]="this.CurrentX.level_label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="status_label">项目状态</label>
+                  <input type="text" readonly="readonly" class="form-control" id="status_label" name="status_label" [(ngModel)]="this.CurrentX.status_label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="lenovo_label">联想负责人</label>
+                  <input type="text" readonly="readonly" class="form-control" id="lenovo_label" name="lenovo_label" [(ngModel)]="this.CurrentX.lenovo_label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="enterprise_label">所属公司</label>
+                  <input type="text" readonly="readonly" class="form-control" id="enterprise_label" name="enterprise_label" [(ngModel)]="this.CurrentX.enterprise_label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="plan_start_dt">计划开始时间</label>
+                  <input type="text" readonly="readonly" class="form-control" id="plan_start_dt" name="plan_start_dt" [(ngModel)]="this.CurrentX.plan_start_dt">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="plan_end_dt">计划结束时间</label>
+                  <input type="text" readonly="readonly" class="form-control" id="plan_end_dt" name="plan_end_dt" [(ngModel)]="this.CurrentX.plan_end_dt">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="real_start_dt">实际开始时间</label>
+                  <input type="text" readonly="readonly" class="form-control" id="real_start_dt" name="real_start_dt" [(ngModel)]="this.CurrentX.real_start_dt">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="real_end_dt">实际结束时间</label>
+                  <input type="text" readonly="readonly" class="form-control" id="real_end_dt" name="real_end_dt" [(ngModel)]="this.CurrentX.real_end_dt">
+                </div>
+              </div>
+            </div>
+          </nb-tab>
+
+          <nb-tab tabTitle="附件">
+            <ng2-smart-table [settings]="settingsFile" [source]="xsFile">
+            </ng2-smart-table>
+          </nb-tab>
+        </nb-tabset>
+        <hr />
+        <div class="col-md-12 col-lg-12">
+          <button (click)="backD()" class="btn btn-success">返回列表</button>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+

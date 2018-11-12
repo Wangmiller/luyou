@@ -1,0 +1,10 @@
+<nb-card>
+  <nb-card-header>
+    回收站列表（编辑后可以还原记录）
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" (editConfirm)="onEditConfirm($event)" [source]="xs" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

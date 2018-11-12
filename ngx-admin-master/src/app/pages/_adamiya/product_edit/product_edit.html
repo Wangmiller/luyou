@@ -1,0 +1,141 @@
+<div class="row">
+  <div class="col-md-8">
+    <nb-card>
+      <nb-card-header>
+        产品详细信息修改&nbsp;&nbsp;
+        <button (click)="addFavor()" class="btn btn-hero-warning" ngbTooltip="添加收藏"><i class="nb-heart"></i>{{favor_info}}</button>&nbsp;&nbsp;
+        <button (click)="addCompare()" class="btn btn-hero-warning" ngbTooltip="加入对比"><i class="nb-checkmark"></i>{{compare_info}}</button>
+      </nb-card-header>
+      <nb-card-body>
+        <nb-tabset fullWidth>
+          <nb-tab tabTitle="基本">
+            <div class="row">
+              <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                  <label for="label">产品名称</label>
+                  <input type="text" class="form-control" id="label" name="label" (change)="updateD()" [(ngModel)]="this.CurrentX.label">
+                </div>
+              </div>
+              <!-- <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="type_sn">产品类型</label>
+                  <select id="type_sn" class="form-control" name="type_sn"  (change)="updateD()" [(ngModel)]="this.CurrentX.type_sn">
+                    <option *ngFor="let item of this.xsEType" [value]='item.sn'>{{item.label}}</option>
+                  </select>
+                </div>
+              </div> -->
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="sku">产品SKU</label>
+                  <input type="text" class="form-control" id="sku" name="sku" (change)="updateD()" [(ngModel)]="this.CurrentX.sku">
+                </div>
+              </div>
+              <!-- <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="price_sale">零售价</label>
+                  <input type="text" class="form-control" id="price_sale" name="price_sale" (change)="updateD()" [(ngModel)]="this.CurrentX.price_sale">
+                </div>
+              </div> -->
+              <!-- <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="price_out">出货价</label>
+                  <input type="text" class="form-control" id="price_out" name="price_out" (change)="updateD()" [(ngModel)]="this.CurrentX.price_out">
+                </div>
+              </div> -->
+              <!-- <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="moq">MOQ</label><br />
+                  <input type="text" class="form-control col-sm-7 col-lg-7 d-inline" id="moq" name="moq" (change)="updateD()" [(ngModel)]="this.CurrentX.moq">
+                  <input type="text" class="form-control col-sm-5 col-lg-5 d-inline" id="moq_unit" name="moq_unit" (change)="updateD()" [(ngModel)]="this.CurrentX.moq_unit">
+                </div>
+              </div> -->
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="seo_tag">产品特性关键字</label>
+                  <input type="text" class="form-control" id="seo_tag" name="seo_tag" (change)="updateD()" [(ngModel)]="this.CurrentX.seo_tag">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="level_sn">产品成熟度</label>
+                  <select id="level_sn" class="form-control" name="level_sn"  (change)="updateD()" [(ngModel)]="this.CurrentX.level_sn">
+                    <option *ngFor="let item of this.xsELevel" [value]='item.sn'>{{item.label}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="status_sn">产品状态</label>
+                  <select id="status_sn" class="form-control" name="status_sn"  (change)="updateD()" [(ngModel)]="this.CurrentX.status_sn">
+                    <option *ngFor="let item of this.xsEStatus" [value]='item.sn'>{{item.label}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="enterprise_sn">所属公司</label>
+                  <select id="enterprise_sn" class="form-control" name="enterprise_sn"  (change)="updateD()" [(ngModel)]="this.CurrentX.enterprise_sn">
+                    <option *ngFor="let item of this.xsEnter" [value]='item.sn'>{{item.label}}</option>
+                  </select>
+                </div>
+              </div>
+              <!-- <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="project_label">关联项目</label>
+                  <input type="text" readonly="readonly" class="form-control" id="project_label" name="project_label" (change)="updateD()" [(ngModel)]="this.CurrentX.project_label">
+                </div>
+              </div> -->
+            </div>
+          </nb-tab>
+
+          <nb-tab tabTitle="附件">
+            <div class="input-group mail-btn-group">
+              <span class="input-group-prepend">
+                <button type="button" class="btn btn-info" (click)="selectFile()">选择</button>
+                <input id="myfiles" type="file" hidden="hidden" (change)="showFile()" />
+              </span>
+              <input type="text" readonly="readonly" class="form-control" [(ngModel)]="this.temp_file">
+              <span class="input-group-append">
+                <button type="button" class="btn btn-info" (click)="attachFile()">上传</button>
+              </span>
+            </div>
+            <ng2-smart-table [settings]="settingsFile" [source]="xsFile" (editConfirm)="onEditFileConfirm($event)" (userRowSelect)="onFileRowSelect($event)" (deleteConfirm)="onDeleteFileConfirm($event)">
+            </ng2-smart-table>
+          </nb-tab>
+        </nb-tabset>
+        <hr />
+        <div class="col-md-12 col-lg-12">
+          <button (click)="backD()" class="btn btn-success">返回列表</button>
+          <button type="submit" hidden="hidden" (click)="updateD()" class="btn btn-info pull-right">确认修改</button>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-2">
+    <nb-card><nb-card-header>
+      行业关联
+    </nb-card-header>
+      <nb-card-body>
+        <ng2-smart-table [settings]="settingsIndustry" [source]="xsIndustry" (userRowSelect)="onIUserRowSelect($event)">
+        </ng2-smart-table>
+        <hr />
+        <ng2-smart-table [settings]="settingsIndustryNA" [source]="xsIndustryNA" (userRowSelect)="onINAUserRowSelect($event)">
+        </ng2-smart-table>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-2">
+    <nb-card><nb-card-header>
+      场景关联
+    </nb-card-header>
+      <nb-card-body>
+        <ng2-smart-table [settings]="settingsScene" [source]="xsScene" (userRowSelect)="onSUserRowSelect($event)">
+        </ng2-smart-table>
+        <hr />
+        <ng2-smart-table [settings]="settingsSceneNA" [source]="xsSceneNA" (userRowSelect)="onSNAUserRowSelect($event)">
+        </ng2-smart-table>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+

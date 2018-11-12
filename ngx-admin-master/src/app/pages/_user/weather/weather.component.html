@@ -1,0 +1,60 @@
+<nb-card size="medium">
+  <nb-card-body>
+    <div class="location">
+      <span>我的数据一览</span>
+    </div>
+    <div class="date">
+      <span>{{ CDT }}</span>
+    </div>
+    <div class="daily-forecast">
+      <div class="info">
+        <div class="temperature">
+          <span></span>
+        </div>
+        <div class="icon">
+
+        </div>
+      </div>
+      <div class="details">
+        <div class="parameter">
+          <span class="parameter-name">我的收藏总数</span>
+          <span class="parameter-value">{{ TotalProductFavorCount }}</span>
+        </div>
+        <div class="parameter">
+          <span class="parameter-name">我的企业总数</span>
+          <span class="parameter-value">{{ TotalUserEnterpriseCount }}</span>
+        </div>
+        <div class="parameter">
+          <span class="parameter-name">我的产品总数</span>
+          <span class="parameter-value">{{ TotalUserProductCount }}</span>
+        </div>
+        <div class="parameter">
+          <span class="parameter-name">我的项目总数</span>
+          <span class="parameter-value">{{ TotalUserProjectCount }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="weekly-forecast">
+      <div class="day">
+        <span class="caption">我上传的文件总数</span>
+        <span class="temperature">{{ TotalUserFileCount }}</span>
+        <i class="ion-android-contacts"></i>
+      </div>
+      <div class="day">
+        <span class="caption">被联想负责的企业总数</span>
+        <span class="temperature">{{ TotalEnterpriseLenovoCount }}</span>
+        <i class="ion-android-globe"></i>
+      </div>
+      <div class="day">
+        <span class="caption">被收藏产品的总数</span>
+        <span class="temperature">{{ TotalProductFavoredCount }}</span>
+        <i class="ion-android-favorite"></i>
+      </div>
+      <div class="day">
+        <span class="caption">被联想负责的项目总数</span>
+        <span class="temperature">{{ TotalProjectLenovoCount }}</span>
+        <i class="ion-android-apps"></i>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>

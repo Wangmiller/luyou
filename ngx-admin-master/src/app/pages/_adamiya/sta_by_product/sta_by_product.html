@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col-lg-12">
+    <nb-card>
+      <nb-card-header>产品统计分析</nb-card-header>
+      <nb-card-body>
+        <!-- <div class="row">
+          <div class="col-xxxl-3 col-md-6">
+            <span>新增行业完成比</span>
+            <br />
+            <button class="btn btn-warning">{{a}}/{{b}}</button>
+          </div>
+          <div class="col-xxxl-3 col-md-6">
+            <span>新增场景完成比</span>
+            <br />
+            <button class="btn btn-info">{{c}}/{{d}}</button>
+          </div>
+          <div class="col-xxxl-3 col-md-6">
+            <span>新增产品完成比</span>
+            <br />
+            <button class="btn btn-success">{{e}}/{{f}}</button>
+          </div>
+          <div class="col-xxxl-3 col-md-6">
+            <span>同比去年增长</span>
+            <br />
+            <button class="btn btn-danger">{{g}}%</button>
+          </div>
+        </div> -->
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>行业比例统计</nb-card-header>
+      <nb-card-body>
+        <ngx-echarts-pie-industry-product></ngx-echarts-pie-industry-product>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>场景比例统计</nb-card-header>
+      <nb-card-body>
+        <ngx-echarts-pie-scene-product></ngx-echarts-pie-scene-product>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-lg-12">
+    <nb-card>
+      <nb-card-header>不同行业新增产品统计</nb-card-header>
+      <nb-card-body>
+        <ngx-echarts-area-stack-product></ngx-echarts-area-stack-product>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

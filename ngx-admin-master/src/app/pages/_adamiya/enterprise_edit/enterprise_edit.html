@@ -1,0 +1,355 @@
+<div class="row">
+  <div class="col-md-8">
+    <nb-card>
+      <nb-card-header>
+        企业详细信息修改（自动保存）
+      </nb-card-header>
+      <nb-card-body>
+        <nb-tabset fullWidth>
+          <nb-tab tabTitle="基本">
+            <div class="row">
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="label">公司名称</label>
+                  <input type="text" class="form-control" id="label" name="label" (change)="updateD()" [(ngModel)]="this.CurrentX.label" >
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_cn_uid">统一信用代码</label>
+                  <input type="text" class="form-control" id="basic_cn_uid" name="basic_cn_uid" (change)="updateD()" [(ngModel)]="this.CurrentX.basic_cn_uid">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_setup_dt">成立日期</label>
+                  <input type="date" class="form-control" id="basic_setup_dt" name="basic_setup_dt" (change)="updateD()" [(ngModel)]="this.CurrentX.basic_setup_dt">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_reg_sn">注册号</label>
+                  <input type="text" class="form-control" id="basic_reg_sn" name="basic_reg_sn" (change)="updateD()" [(ngModel)]="this.CurrentX.basic_reg_sn">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_reg_address">总部地点</label>
+                  <input type="text" class="form-control" id="basic_reg_address" name="basic_reg_address" (change)="updateD()" [(ngModel)]="this.CurrentX.basic_reg_address">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="type_sn">公司类型</label>
+                  <select id="type_sn" class="form-control" name="type_sn" (change)="updateD()" [(ngModel)]="this.CurrentX.type_sn">
+                    <option *ngFor="let item of this.xsEType" [value]='item.sn'>{{item.label}}</option>
+                  </select>
+                </div>
+              </div>
+              <!--<div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_biz_keywords">主营业务</label>
+                  <input type="text" class="form-control" id="basic_biz_keywords" name="basic_biz_keywords" (change)="updateD()" [(ngModel)]="this.CurrentX.basic_biz_keywords">
+                </div>
+              </div>-->
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_legal_rep">法人代表</label>
+                  <input type="text" class="form-control" id="basic_legal_rep" name="basic_legal_rep" (change)="updateD()" [(ngModel)]="this.CurrentX.basic_legal_rep">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_latest_reg_dt">最新变更日期</label>
+                  <input type="date" class="form-control" id="basic_latest_reg_dt" name="basic_latest_reg_dt" (change)="updateD()" [(ngModel)]="this.CurrentX.basic_latest_reg_dt">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_reg_capital">注册资本</label>
+                  <input type="number" class="form-control" id="basic_reg_capital" name="basic_reg_capital" (change)="updateD()" [(ngModel)]="this.CurrentX.basic_reg_capital">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_biz_dt_range">营业期限</label>
+                  <input type="text" class="form-control" id="basic_biz_dt_range" name="basic_biz_dt_range" (change)="updateD()" [(ngModel)]="this.CurrentX.basic_biz_dt_range">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_charge_office">登记机关</label>
+                  <input type="text" class="form-control" id="basic_charge_office" name="basic_charge_office" (change)="updateD()" [(ngModel)]="this.CurrentX.basic_charge_office">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_biz_tel">办公电话</label>
+                  <input type="text" class="form-control" id="basic_biz_tel" (change)="updateD()" name="basic_biz_tel" [(ngModel)]="this.CurrentX.basic_biz_tel">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="basic_org_sn">组织机构代码</label>
+                  <input type="text" class="form-control" id="basic_org_sn" (change)="updateD()" name="basic_org_sn" [(ngModel)]="this.CurrentX.basic_org_sn">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="status_sn">经营状态</label>
+                  <select id="status_sn" class="form-control" name="status_sn" (change)="updateD()" [(ngModel)]="this.CurrentX.status_sn">
+                    <option *ngFor="let item of this.xsEStatus" [value]='item.sn'>{{item.label}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-12">
+                <div class="form-group">
+                  <label for="basic_biz_address">企业地址</label>
+                  <input type="text" class="form-control" id="basic_biz_address" (change)="updateD()" name="basic_biz_address" [(ngModel)]="this.CurrentX.basic_biz_address">
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                  <label for="basic_biz_range">经营范围</label>
+                  <input type="text" class="form-control" id="basic_biz_range" name="basic_biz_range" (change)="updateD()" [(ngModel)]="this.CurrentX.basic_biz_range">
+                </div>
+              </div>
+            </div>
+          </nb-tab>
+          <nb-tab tabTitle="联系人">
+            <h5 class="grid-h">联想负责人</h5>
+            <ng2-smart-table [settings]="settingsUserLenovo" [source]="xsUserLenovo" (createConfirm)="onCreateUserLenovoConfirm($event)" (editConfirm)="onEditUserLenovoConfirm($event)" (deleteConfirm)="onDeleteUserLenovoConfirm($event)">
+            </ng2-smart-table>
+            <hr />
+            <h5 class="grid-h">联系人</h5>
+            <ng2-smart-table [settings]="settingsUserContact" [source]="xsUserContact" (createConfirm)="onCreateUserContactConfirm($event)" (editConfirm)="onEditUserContactConfirm($event)" (deleteConfirm)="onDeleteUserContactConfirm($event)">
+            </ng2-smart-table>
+          </nb-tab>
+          <nb-tab tabTitle="财务">
+            <div class="row">
+              <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                  <span>{{ CurrentX.acc_year_last }}年度</span>
+                  <hr />
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_asset_last">资产总额</label>
+                  <input type="number" class="form-control" id="acc_asset_last" name="acc_asset_last" (change)="updateD()" [(ngModel)]="this.CurrentX.acc_asset_last">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_sales_last">销售收入</label>
+                  <input type="number" class="form-control" id="acc_sales_last" name="acc_sales_last" (change)="updateD()" [(ngModel)]="this.CurrentX.acc_sales_last">
+                </div>
+              </div>
+              <!--<div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_debt_last">负债总额</label>
+                  <input type="number" class="form-control" id="acc_debt_last" name="acc_debt_last" (change)="updateD()" [(ngModel)]="this.CurrentX.acc_debt_last">
+                </div>
+              </div>-->
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_profit_last">净利润</label>
+                  <input type="number" class="form-control" id="acc_profit_last" name="acc_profit_last" (change)="updateD()" [(ngModel)]="this.CurrentX.acc_profit_last">
+                </div>
+              </div>
+              <!--<div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_debt_rate_last">资产负债率（%）</label>
+                  <input type="number" class="form-control" id="acc_debt_rate_last" name="acc_debt_rate_last" (change)="updateD()" [(ngModel)]="this.CurrentX.acc_debt_rate_last">
+                </div>
+              </div>-->
+              <div class="col-sm-6 col-lg-6">
+
+              </div>
+              <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                  <span>{{ CurrentX.acc_year }}年度</span>
+                  <hr />
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_asset">资产总额</label>
+                  <input type="number" class="form-control" id="acc_asset" name="acc_asset" (change)="updateD()" [(ngModel)]="this.CurrentX.acc_asset">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_sales">销售收入</label>
+                  <input type="number" class="form-control" id="acc_sales" name="acc_sales" (change)="updateD()" [(ngModel)]="this.CurrentX.acc_sales">
+                </div>
+              </div>
+              <!--<div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_debt">负债总额</label>
+                  <input type="number" class="form-control" id="acc_debt" name="acc_debt" (change)="updateD()" [(ngModel)]="this.CurrentX.acc_debt">
+                </div>
+              </div>-->
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_profit">净利润</label>
+                  <input type="number" class="form-control" id="acc_profit" name="acc_profit" (change)="updateD()" [(ngModel)]="this.CurrentX.acc_profit">
+                </div>
+              </div>
+             <!-- <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_debt_rate">资产负债率（%）</label>
+                  <input type="number" class="form-control" id="acc_debt_rate" name="acc_debt_rate" (change)="updateD()" [(ngModel)]="this.CurrentX.acc_debt_rate">
+                </div>
+              </div>-->
+              <div class="col-sm-6 col-lg-6">
+
+              </div>
+              <!--<div class="col-sm-12 col-lg-12">
+                <hr />
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_bank">收款银行</label>
+                  <input type="text" class="form-control" id="acc_bank" name="acc_bank" (change)="updateD()" [(ngModel)]="this.CurrentX.acc_bank">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_bank_branch">支行名称</label>
+                  <input type="text" class="form-control" id="acc_bank_branch" name="acc_bank_branch" (change)="updateD()" [(ngModel)]="this.CurrentX.acc_bank_branch">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="acc_bank_sn">账号</label>
+                  <input type="text" class="form-control" id="acc_bank_sn" name="acc_bank_sn" (change)="updateD()" [(ngModel)]="this.CurrentX.acc_bank_sn">
+                </div>
+              </div>-->
+            </div>
+          </nb-tab>
+          <nb-tab tabTitle="项目">
+            <ng2-smart-table [settings]="settingsProject" [source]="xsProject" (createConfirm)="onCreateProjectConfirm($event)" (editConfirm)="onEditProjectConfirm($event)" (deleteConfirm)="onDeleteProjectConfirm($event)">
+            </ng2-smart-table>
+          </nb-tab>
+          <nb-tab tabTitle="产品">
+            <ng2-smart-table [settings]="settingsProduct" [source]="xsProduct" (createConfirm)="onCreateProductConfirm($event)" (editConfirm)="onEditProductConfirm($event)" (deleteConfirm)="onDeleteProductConfirm($event)">
+            </ng2-smart-table>
+          </nb-tab>
+          <nb-tab tabTitle="附件">
+            <div class="input-group mail-btn-group">
+              <span class="input-group-prepend">
+                <button type="button" class="btn btn-info" (click)="selectFile()">选择</button>
+                <input id="myfiles" type="file" hidden="hidden" (change)="showFile()" />
+              </span>
+              <input type="text" readonly="readonly" class="form-control" [(ngModel)]="this.temp_file">
+              <span class="input-group-append">
+                <button type="button" class="btn btn-info" (click)="attachFile()">上传</button>
+              </span>
+            </div>
+            <ng2-smart-table [settings]="settingsFile" [source]="xsFile" (editConfirm)="onEditFileConfirm($event)" (deleteConfirm)="onDeleteFileConfirm($event)" (userRowSelect)="onFileRowSelect($event)">
+            </ng2-smart-table>
+          </nb-tab>
+          <nb-tab tabTitle="其他">
+            <div class="row">
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="other_credits">纳税人资质</label>
+                  <input type="text" class="form-control" id="other_credits" name="other_credits" (change)="updateD()" [(ngModel)]="this.CurrentX.other_taxpayer_aptitude">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="other_deliver_address">税级</label>
+                  <input type="text" class="form-control" id="other_deliver_address" name="other_deliver_address" (change)="updateD()" [(ngModel)]="this.CurrentX.other_tax_level">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="level_sn">企业等级</label>
+                  <select id="level_sn" class="form-control" name="level_sn" (change)="updateD()" [(ngModel)]="this.CurrentX.level_sn">
+                    <option *ngFor="let item of this.xsELevel" [value]='item.sn'>{{item.label}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="other_transport">参保人数</label>
+                  <input type="text" class="form-control" id="other_transport" name="other_transport" (change)="updateD()" [(ngModel)]="this.CurrentX.other_insured_num">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="other_website">公司网站</label>
+                  <input type="text" class="form-control" id="other_website" name="other_website" (change)="updateD()" [(ngModel)]="this.CurrentX.other_website">
+                </div>
+              </div>
+              <!--<div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="other_deliver_days">最短交货期</label>
+                  <input type="text" class="form-control" id="other_deliver_days" name="other_deliver_days" (change)="updateD()" [(ngModel)]="this.CurrentX.other_deliver_days">
+                </div>
+              </div>-->
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="other_email">公司邮箱</label>
+                  <input type="text" class="form-control" id="other_email" name="other_email" (change)="updateD()" [(ngModel)]="this.CurrentX.other_email">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="other_size">公司规模</label>
+                  <input type="text" class="form-control" id="other_size" name="other_size" (change)="updateD()" [(ngModel)]="this.CurrentX.other_size">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="seo_tag">企业标签</label>
+                  <input type="text" class="form-control" id="seo_tag" name="seo_tag" (change)="updateD()" [(ngModel)]="this.CurrentX.seo_tag">
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                  <label for="more_info">备注</label>
+                  <input type="text" class="form-control" (change)="updateD()" id="more_info" name="more_info" [(ngModel)]="this.CurrentX.more_info">
+                </div>
+              </div>
+            </div>
+          </nb-tab>
+        </nb-tabset>
+        <hr />
+        <div class="col-md-12 col-lg-12">
+          <button (click)="backD()" class="btn btn-success">返回列表</button>
+          <button type="submit" hidden="hidden" (click)="updateD()" class="btn btn-info pull-right">确认修改</button>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+<div class="col-md-2">
+    <nb-card><nb-card-header>
+      行业关联
+    </nb-card-header>
+      <nb-card-body>
+        <ng2-smart-table [settings]="settingsIndustry" [source]="xsIndustry" (userRowSelect)="onIUserRowSelect($event)">
+        </ng2-smart-table>
+        <hr />
+        <ng2-smart-table [settings]="settingsIndustryNA" [source]="xsIndustryNA" (userRowSelect)="onINAUserRowSelect($event)">
+        </ng2-smart-table>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-2">
+    <nb-card><nb-card-header>
+      场景关联
+    </nb-card-header>
+      <nb-card-body>
+        <ng2-smart-table [settings]="settingsScene" [source]="xsScene" (userRowSelect)="onSUserRowSelect($event)">
+        </ng2-smart-table>
+        <hr />
+        <ng2-smart-table [settings]="settingsSceneNA" [source]="xsSceneNA" (userRowSelect)="onSNAUserRowSelect($event)">
+        </ng2-smart-table>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+

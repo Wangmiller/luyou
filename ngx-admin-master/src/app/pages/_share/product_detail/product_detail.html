@@ -1,0 +1,108 @@
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>
+        产品详细信息&nbsp;&nbsp;
+        <button (click)="addFavor()" class="btn btn-hero-warning" ngbTooltip="添加收藏"><i class="nb-heart"></i>{{favor_info}}</button>&nbsp;&nbsp;
+        <button (click)="addCompare()" class="btn btn-hero-warning" ngbTooltip="加入对比"><i class="nb-checkmark"></i>{{compare_info}}</button>
+      </nb-card-header>
+      <nb-card-body>
+        <nb-tabset fullWidth>
+          <nb-tab tabTitle="基本">
+            <div class="row">
+              <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                  <label for="label">产品名称</label>
+                  <input type="text" readonly="readonly" class="form-control" id="label" name="label" [(ngModel)]="this.CurrentX.label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="type_label">产品类型</label>
+                  <input type="text" readonly="readonly" class="form-control" id="type_label" name="type_label" [(ngModel)]="this.CurrentX.type_label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="sku">产品SKU</label>
+                  <input type="text" readonly="readonly" class="form-control" id="sku" name="sku" [(ngModel)]="this.CurrentX.sku">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="price_sale">零售价</label>
+                  <input type="text" readonly="readonly" class="form-control" id="price_sale" name="price_sale" [(ngModel)]="this.CurrentX.price_sale">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="price_out">出货价</label>
+                  <input type="text" readonly="readonly" class="form-control" id="price_out" name="price_out" [(ngModel)]="this.CurrentX.price_out">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="moq">MOQ</label><br />
+                  <input type="text" readonly="readonly" class="form-control col-sm-7 col-lg-7 d-inline" id="moq" name="moq" [(ngModel)]="this.CurrentX.moq">
+                  <input type="text" readonly="readonly" class="form-control col-sm-5 col-lg-5 d-inline" id="moq_unit" name="moq_unit" [(ngModel)]="this.CurrentX.moq_unit">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="seo_tag">产品特性关键字</label>
+                  <input type="text" readonly="readonly" class="form-control" id="seo_tag" name="seo_tag" [(ngModel)]="this.CurrentX.seo_tag">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="level_label">产品成熟度</label>
+                  <input type="text" readonly="readonly" class="form-control" id="level_label" name="level_label" [(ngModel)]="this.CurrentX.level_label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="status_label">产品状态</label>
+                  <input type="text" readonly="readonly" class="form-control" id="status_label" name="status_label" [(ngModel)]="this.CurrentX.status_label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="industries">关联行业</label>
+                  <input type="text" readonly="readonly" class="form-control" id="industries" name="industries" [(ngModel)]="this.CurrentX.industries">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="scenes">关联场景</label>
+                  <input type="text" readonly="readonly" class="form-control" id="scenes" name="scenes" [(ngModel)]="this.CurrentX.scenes">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="enterprise_label">所属公司</label>
+                  <input type="text" readonly="readonly" class="form-control" id="enterprise_label" name="enterprise_label" [(ngModel)]="this.CurrentX.enterprise_label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="project_label">关联项目</label>
+                  <input type="text" readonly="readonly" class="form-control" id="project_label" name="project_label" [(ngModel)]="this.CurrentX.project_label">
+                </div>
+              </div>
+            </div>
+          </nb-tab>
+
+          <nb-tab tabTitle="附件">
+            <ng2-smart-table [settings]="settingsFile" (userRowSelect)="onFileRowSelect($event)" [source]="xsFile">
+            </ng2-smart-table>
+          </nb-tab>
+        </nb-tabset>
+        <hr />
+        <div class="col-md-12 col-lg-12">
+          <button (click)="backD()" class="btn btn-success">返回列表</button>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+

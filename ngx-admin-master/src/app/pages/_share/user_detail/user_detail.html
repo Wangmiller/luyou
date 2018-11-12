@@ -1,0 +1,70 @@
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>
+        用户详细信息
+      </nb-card-header>
+      <nb-card-body>
+        <nb-tabset fullWidth>
+          <nb-tab tabTitle="基本">
+            <div class="row">
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="label">真实姓名</label>
+                  <input type="text" class="form-control" id="label" name="label" [(ngModel)]="this.CurrentX.label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="type_label">用户类型</label>
+                  <input type="text" readonly="readonly" class="form-control" id="type_label" name="type_label" [(ngModel)]="this.CurrentX.type_label">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="login_name">登录账号</label>
+                  <input type="text" readonly="readonly" class="form-control" id="login_name" name="login_name" [(ngModel)]="this.CurrentX.login_name">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="cn_id">身份证号</label>
+                  <input type="text" class="form-control" id="cn_id" name="cn_id" [(ngModel)]="this.CurrentX.cn_id">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="position">职位</label>
+                  <input type="text" class="form-control" id="position" name="position" [(ngModel)]="this.CurrentX.position">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="email">电子邮件</label>
+                  <input type="text" class="form-control" id="email" name="email" [(ngModel)]="this.CurrentX.email">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="tel">办公电话</label>
+                  <input type="text" class="form-control" id="tel" name="tel" [(ngModel)]="this.CurrentX.tel">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-6">
+                <div class="form-group">
+                  <label for="mobile">手机号码</label>
+                  <input type="text" class="form-control" id="mobile" name="mobile" [(ngModel)]="this.CurrentX.mobile">
+                </div>
+              </div>
+            </div>
+          </nb-tab>
+        </nb-tabset>
+        <hr />
+        <div class="col-md-12 col-lg-12">
+          <button type="submit" (click)="updateD()" class="btn btn-info pull-right">确认修改</button>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+

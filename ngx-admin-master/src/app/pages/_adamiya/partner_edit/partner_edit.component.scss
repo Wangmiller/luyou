@@ -1,0 +1,89 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  .full-width {
+    flex: 1;
+    min-width: 220px;
+  }
+
+  nb-checkbox {
+    margin-bottom: 1rem;
+  }
+  select-filter {
+    height: 20px;
+    width: 200px;
+  }
+
+  .form-inline > * {
+    @include nb-ltr(margin, 0 1.5rem 1.5rem 0);
+    @include nb-rtl(margin, 0 0 1.5rem 1.5rem);
+  }
+
+  nb-card.inline-form-card nb-card-body {
+    padding-bottom: 0;
+  }
+}
+
+.company-detail{
+  padding: 0 !important;
+  /*border-top: thin solid #342e73 !important;*/
+  border: thin solid #342e73 !important;
+  input{
+    border: none;
+    background: #3d3780;
+    color: #d1d1ff;
+    line-height: 40px;
+    outline: none;
+  }
+  ul,li{
+    list-style: none;
+    display: inline-block;
+    border-bottom: thin solid #342e73;
+    border-left: thin solid #342e73;
+    text-align: left;
+    line-height: 40px;
+  }
+  .line-title{
+    //font-weight: 600;
+  }
+
+  .list_li{
+    padding: 0 !important;
+    border:none;
+    .nspan{
+      display: inline-block;
+      padding-left: 15px;
+      border-left: thin solid #342e73;
+      border-bottom: thin solid #342e73;
+    }
+  }
+}
+.score-part {
+  //border: thin solid #fff;
+  display: inline-block;
+  .score-form {
+    border: thin solid #fff;
+    display: inline-block;
+  }
+}
+.part-label{
+  border-radius: 0;
+  line-height: 3px;
+  border: thin;
+}
+.table-title{
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  padding-top: 10px;
+}
+.t-title{
+  display: inline-block;
+  padding-left: 0;
+  line-height: 50px;
+  border-bottom: thin solid #342e73;
+  span{
+    display: inline-block;
+  }
+
+}
