@@ -1,0 +1,40 @@
+﻿//select.js
+const express = require('express');
+const http = require('http');
+const app = express();
+var router = express.Router();
+const connection = require('../@api/mysql.js');//导入mysql 配置文件
+var URL = require('url');
+var lib = require('../@api/lib');
+var querystring = require('querystring');
+
+app.post('/', function(req, res) {
+  var params = "";
+  req.on('data', function (chunk) {
+    params += chunk;
+  });
+  req.on('end', function () {
+    var lll = new lib();
+    var sn = lll.GetUUID();
+    var addSql = "insert into product_info (sn,custom_code,label,sku,moq,moq_unit,price_out,price_sale,creator_sn,enterprise_sn,create_dt) values (?,?,?,?,?,?,?,?,?,?,now())";
+    params = querystring.parse(params);
+    var addSqlParams = [sn, params.custom_code||'', params.label, params.sku, params.moq||0, params.moq_unit||'', params.price_out||0, params.price_sale||0, params.usn, params.enterprise_sn];
+    // 设置响应头部信息及编码
+    // res.writeHead(200, {'Content-Type': 'text/html; charset=utf8'});
+    connection.query(addSql, addSqlParams, function (err, result) {
+      if(err){
+        console.log('[INSERT ERROR] - ',err.message);
+        return;
+      }
+      else {
+        //res.send("OK");
+      }
+    });
+  });
+  // var req=req;
+  // var res=res;
+  // var params = URL.parse(req.url, true).query;
+
+})
+
+module.exports = app
